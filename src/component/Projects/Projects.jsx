@@ -3,7 +3,7 @@ import Layout from "../../Latout/Layout";
 import { useEffect } from "react";
 import { client } from "./../../lib/sanity";
 import ProjectsCard from "./ProjectsCard";
-import { AiOutlineLoading3Quarters } from "react-icons/ai";
+
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -25,16 +25,21 @@ const Projects = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-screen">
-        <AiOutlineLoading3Quarters />
+        <span className="loading loading-dots loading-xs"></span>
+        <span className="loading loading-dots loading-sm"></span>
+        <span className="loading loading-dots loading-md"></span>
+        <span className="loading loading-dots loading-lg"></span>
       </div>
     );
   }
 
   return (
     <Layout title="Projects">
-      <div className="flex flex-wrap gap-5 justify-center container mx-auto mt-5">{
-        projects.map((project) => (<ProjectsCard key={project._id} project={project} />))
-      }</div>
+      <div className="flex flex-wrap gap-5 justify-center container mx-auto mt-5">
+        {projects.map((project) => (
+          <ProjectsCard key={project._id} project={project} />
+        ))}
+      </div>
     </Layout>
   );
 };

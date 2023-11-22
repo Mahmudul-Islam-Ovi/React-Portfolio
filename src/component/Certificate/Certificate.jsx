@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Layout from "../../Latout/Layout";
 import { client } from "../../lib/sanity";
-import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import CertificateCard from "./CertificateCard";
 
 const Certificate = () => {
@@ -23,7 +22,10 @@ const Certificate = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-screen">
-        <AiOutlineLoading3Quarters />
+        <span className="loading loading-bars loading-xs"></span>
+        <span className="loading loading-bars loading-sm"></span>
+        <span className="loading loading-bars loading-md"></span>
+        <span className="loading loading-bars loading-lg"></span>
       </div>
     );
   }
