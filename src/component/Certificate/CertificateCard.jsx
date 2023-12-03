@@ -9,7 +9,7 @@ const CertificateCard = ({ certificate }) => {
   } = certificate;
   return (
     <div>
-      <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="card w-96 bg-base-100  mb-10 shadow-xl">
         <figure className="px-10 pt-10">
           <img src={certificateImage} alt="Shoes" className="rounded-xl" />
         </figure>

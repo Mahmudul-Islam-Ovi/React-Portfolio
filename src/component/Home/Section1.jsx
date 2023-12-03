@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import myimage from "../../assets/imges/Mahmudul-Islam.jpg";
-import { FaDownload, FaFacebook } from "react-icons/fa6";
+import { FaDownload } from "react-icons/fa6";
 
 const Section1 = () => {
   return (
-    <div className=" bg-red-200 lg:p-20 p-10">
+    <div className=" lg:p-20 p-10">
       <div className=" flex justify-center">
         <img
           className="rounded-full my-5"
@@ -13,7 +13,6 @@ const Section1 = () => {
           alt="mahmudul islam image"
         />
       </div>
-
       <div className="flex justify-center ">
         <div>
           <h1 className="lg:text-3xl text-2xl  mb-5 font-bold text-center">
@@ -21,7 +20,7 @@ const Section1 = () => {
           </h1>
           <h1 className="lg:text-5xl text-3xl mb-5 text-center font-bold">
             MD{" "}
-            <span className="text-red-600 bg-amber-300 px-5  rounded-full">
+            <span className="text-red-700 bg-green-300 px-5  rounded-full">
               MAHMUDUL
             </span>{" "}
             ISLAM
@@ -82,8 +81,6 @@ const Section1 = () => {
                 >
                   <path d="M40,0H10C4.486,0,0,4.486,0,10v30c0,5.514,4.486,10,10,10h30c5.514,0,10-4.486,10-10V10C50,4.486,45.514,0,40,0z M39,17h-3 c-2.145,0-3,0.504-3,2v3h6l-1,6h-5v20h-7V28h-3v-6h3v-3c0-4.677,1.581-8,7-8c2.902,0,6,1,6,1V17z"></path>
                 </svg>
-
-              
               </Link>
             </div>
           </div>
@@ -96,7 +93,13 @@ const Section1 = () => {
             <FaDownload />
           </div>
         </button>
-        <button className="btn">Hire me </button>
+        <Link
+          to="https://www.fiverr.com/mahmudul20?public_mode=true"
+          target="_blank"
+          className="btn"
+        >
+          Hire me
+        </Link>
       </div>
     </div>
   );
