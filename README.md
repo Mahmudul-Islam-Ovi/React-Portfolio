@@ -1,1 +1,1 @@
-Live Link - https://react-portfolio-delta-liard.vercel.app/
+Live Link - https://mahmudul-islam-web.netlify.app/
