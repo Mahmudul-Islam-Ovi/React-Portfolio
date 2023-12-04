@@ -3,7 +3,7 @@ import myimage from "../../assets/imges/Mahmudul-Islam.jpg";
 import { FaDownload } from "react-icons/fa6";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
-const cv = "http://localhost:5173/Mahmudul_Islam_CV.pdf";
+const cv = "https://mahmudul-islam-web.netlify.app/Mahmudul_Islam_CV.pdf";
 const Section1 = () => {
   const [typeEffect] = useTypewriter({
     words: ["Font-End Developer", "React Developer", "Web Designer"],
