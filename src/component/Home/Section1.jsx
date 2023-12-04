@@ -1,8 +1,27 @@
 import { Link } from "react-router-dom";
 import myimage from "../../assets/imges/Mahmudul-Islam.jpg";
 import { FaDownload } from "react-icons/fa6";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 
+const cv = "http://localhost:5173/Mahmudul_Islam_CV.pdf";
 const Section1 = () => {
+  const [typeEffect] = useTypewriter({
+    words: ["Font-End Developer", "React Developer", "Web Designer"],
+    loop: {},
+    typeSpeed: 200,
+    delaySpeed: 150,
+  });
+
+  const downloadCV = (url) => {
+    const fileName = url.split("/").pop();
+    const aTag = document.createElement("a");
+    aTag.href = url;
+    aTag.setAttribute("download", fileName);
+    document.body.appendChild(aTag);
+    aTag.click();
+    aTag.remove();
+  };
+
   return (
     <div className=" lg:p-20 p-10">
       <div className=" flex justify-center">
@@ -19,14 +38,18 @@ const Section1 = () => {
             Hi, This is
           </h1>
           <h1 className="lg:text-5xl text-3xl mb-5 text-center font-bold">
-            MD{" "}
+            MD
             <span className="text-red-700 bg-green-300 px-5  rounded-full">
               MAHMUDUL
             </span>{" "}
             ISLAM
           </h1>
           <h1 className="lg:text-3xl text-3xl text-center font-semibold my-2">
-            I'm a Front-End Developer
+            I'm a{" "}
+            <span className="text-red-500 font-bold font-sans">
+              {typeEffect}
+            </span>
+            <Cursor cursorStyle="..." />
           </h1>
           <div>
             <div className="flex justify-center mt-5 gap-5">
@@ -87,8 +110,11 @@ const Section1 = () => {
         </div>
       </div>
       <div className="flex justify-center gap-5 my-5">
-        <button className="btn">
-          <div className="flex gap-2">
+        <button
+          onClick={() => downloadCV(cv)}
+          className="btn btn-outline btn-info"
+        >
+          <div className="flex gap-2 ">
             <div>Download cv</div>
             <FaDownload />
           </div>
@@ -96,7 +122,7 @@ const Section1 = () => {
         <Link
           to="https://www.fiverr.com/mahmudul20?public_mode=true"
           target="_blank"
-          className="btn"
+          className="btn btn-outline btn-accent"
         >
           Hire me
         </Link>

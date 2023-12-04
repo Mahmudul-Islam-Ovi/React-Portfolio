@@ -1,4 +1,5 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { IoIosSettings } from "react-icons/io";
 
 const NavBar = () => {
   const navLinks = (
@@ -81,7 +82,14 @@ const NavBar = () => {
           </ul>
         </div>
         <div className="navbar-end mr-10">
-          <input type="checkbox" className="toggle toggle-info" checked />
+          {/* <input type="checkbox" className="toggle toggle-info" checked /> */}
+          <Link
+            className=""
+            to="https://mahmudul-islam-portfolio.sanity.studio/desk"
+            target="_blank"
+          >
+            <IoIosSettings />
+          </Link>
         </div>
       </div>
     </div>

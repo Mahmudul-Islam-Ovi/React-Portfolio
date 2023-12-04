@@ -3,7 +3,7 @@ import Section1 from "./Section1";
 
 const Home = () => {
   return (
-    <Layout title="Home">
+    <Layout title="Mahmudul-Home">
       <Section1></Section1>
     </Layout>
   );

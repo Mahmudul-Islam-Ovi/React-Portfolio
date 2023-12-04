@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Layout from "../../Latout/Layout";
 import myimage from "../../assets/imges/Mahmudul-Islam.jpg";
 
@@ -21,7 +22,13 @@ const About = () => {
               Tailwind CSS, Material UI. I am also building knowledge of backend
               technologies such as Node.js, MongoDB, and MySQL.
             </p>
-            <button className="btn btn-primary">Hire me</button>
+            <Link
+              to="https://www.fiverr.com/mahmudul20?public_mode=true"
+              target="_blank"
+              className="btn btn-outline btn-accent"
+            >
+              Hire me
+            </Link>
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@ const ProjectsCard = ({ project }) => {
   } = project;
   return (
     <div>
-      <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="card w-96 mb-40 bg-base-100 shadow-xl">
         <figure>
           <img src={projectPic} alt="Shoes" />
         </figure>
