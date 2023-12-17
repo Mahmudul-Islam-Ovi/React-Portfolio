@@ -6,7 +6,7 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 const cv = "https://mahmudul-islam-web.netlify.app/Mahmudul_Islam_CV.pdf";
 const Section1 = () => {
   const [typeEffect] = useTypewriter({
-    words: ["Font-End Developer", "React Developer", "Web Designer"],
+    words: ["Front-End Developer", "React Developer", "Web Designer"],
     loop: {},
     typeSpeed: 200,
     delaySpeed: 150,
